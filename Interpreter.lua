@@ -76,7 +76,15 @@ local function Interpret(...)
     return("Completed #"..(PC-1).." Instrctions!")
 end
 Interpret(
-1,"print",3,"This will print",0, -- Use 0 or else it wont go to the next call.
-10,1,6,{1,"print","call","This will print 6 times"} -- You call call the last function using the number 3 or the string 'call'
-    -- read docs to learn how to use more
+1,"print",3,"This will print",0, -- Use 0 or else it wont go to the next call/stack.
+10,1,4,{1,"print","call","This will print 4 times"}, -- You call call the last function using the number 3 or the string 'call'
+"EQ","lol1","lol2",{1,"print",3,"Will this print?"}, -- Will not run because lol1 is not equal to lol2
+"EQ","lol1","lol1",{1,"print",3,"I don't know, maybe this will print?"}, -- will run the Interpret table because lol1 is equal to lol1
+7,"player",game, -- will set the variable 'player' value to game
+7,"player","Players", -- Will add "Players" onto the game variable. So game["Players"]
+7,"player","LocalPlayer", -- Will add LocalPlayer, so game["Players"]["LocalPlayer"]
+7,"player","Name", -- game["Players"]["LocalPlayer"]["Name"]
+1,"warn",3,"Players name:", -- Will warn what its about to print
+6,print, -- Since we changed the last function to warn, we will change it back to print
+1,"print",3,"player" -- will print the player variable
 )
