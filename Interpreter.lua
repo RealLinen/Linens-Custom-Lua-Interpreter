@@ -76,7 +76,7 @@ local function Interpret(...)
     return("Completed #"..(PC-1).." Instrctions!")
 end
 Interpret(
-    12,1,"<","2",{
-        1,"print","call","This should print"
-    }
+1,"print",3,"This will print"
+10,1,6,{1,"print","call","This will print 6 times"} -- You call call the last function using the number 3 or the string 'call'
+    -- read docs to learn how to use more
 )
