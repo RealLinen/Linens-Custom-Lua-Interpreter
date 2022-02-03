@@ -1,3 +1,6 @@
+--[[
+Created by: Linen#3485
+]]
 local function Interpret(...)
     local fenv = getfenv();
     local variables = {}
@@ -75,6 +78,7 @@ local function Interpret(...)
     end
     return("Completed #"..(PC-1).." Instrctions!")
 end
+-- REMEMBER TO USE 0 AFTER USING THE NUMBER/INSTRUCTION 3
 Interpret(
 1,"print",3,"This will print",0, -- Use 0 or else it wont go to the next call/stack.
 10,1,4,{1,"print","call","This will print 4 times"}, -- You call call the last function using the number 3 or the string 'call'
@@ -84,7 +88,7 @@ Interpret(
 7,"player","Players", -- Will add "Players" onto the game variable. So game["Players"]
 7,"player","LocalPlayer", -- Will add LocalPlayer, so game["Players"]["LocalPlayer"]
 7,"player","Name", -- game["Players"]["LocalPlayer"]["Name"]
-1,"warn",3,"Players name:", -- Will warn what its about to print
+1,"warn",3,"Players name:",0, -- Will warn what its about to print
 6,print, -- Since we changed the last function to warn, we will change it back to print
 3,"player" -- will call the last function ( which we set to print ) with the argument "player" and since "player" exist in variables, it will print whats in the variable instead.
 )
