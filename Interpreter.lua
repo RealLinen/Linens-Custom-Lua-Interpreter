@@ -86,5 +86,5 @@ Interpret(
 7,"player","Name", -- game["Players"]["LocalPlayer"]["Name"]
 1,"warn",3,"Players name:", -- Will warn what its about to print
 6,print, -- Since we changed the last function to warn, we will change it back to print
-1,"print",3,"player" -- will print the player variable
+3,"player" -- will call the last function ( which we set to print ) with the argument "player" and since "player" exist in variables, it will print whats in the variable instead.
 )
