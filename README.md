@@ -4,6 +4,7 @@ To understand this you need to be smart and have good lua knowlege.
 Created by Linen#3485
 # Documentation
 Numbers: 
+     
      * 0 -- before calling a new stak, call this for the next stack to run ( or next number/function )
      
      * 1, <variable> -- Will set the last function to getfenv[<variable>]
@@ -29,7 +30,7 @@ Numbers:
      * 11 <anything> -- Will set the variables table to <anything>
 
      * 12 <num1> <sign> <num2> <To Interpret> -- Will check if num1<sign>num2 and interpret argument 4 if its true.
-
+# Examples
     [ ->>>> PRINTING ]
   Interpret(1,"print") -- will set last function to getfenv['print']
   
