@@ -1,3 +1,5 @@
+# Note
+I wrote this at the age of 12-13, please do NOT use it as it's shitty lmao.
 # Lua-Releases
 This is an custom Lua Interpreter. It only has an Interpret function, not an function to convert code into t Interpretable one.
 To understand this you need to be smart and have good lua knowlege.
